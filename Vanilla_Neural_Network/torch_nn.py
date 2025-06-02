@@ -76,7 +76,7 @@ y_val = torch.LongTensor(y_val)
 train_ds = TensorDataset(X_train, y_train.float())  
 val_ds = TensorDataset(X_val, y_val.float())
 
-train_loader = DataLoader(train_ds, batch_size=1024, shuffle=True)
+train_loader = DataLoader(train_ds, batch_size=1024, shuffle=True, num_workers=2)
 val_loader = DataLoader(val_ds, batch_size=1024)
 
 input_size = X_train.shape[1]
