@@ -91,9 +91,7 @@ class NeuralNet(nn.Module):
     def __init__(self, input_size,l1, l2, l3):
         super(NeuralNet, self).__init__()
         self.l1 = nn.Linear(input_size, l1)
-        self.relu = nn.ReLU()
         self.l2 = nn.Linear(l1, l2)
-        self.relu = nn.ReLU()
         self.l3 = nn.Linear(l2, l3)
     def forward(self, x):
         out = F.relu(self.l1(x))
